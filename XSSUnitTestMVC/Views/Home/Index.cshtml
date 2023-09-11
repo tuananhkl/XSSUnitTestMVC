@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+    <table cellpadding="5">
+        <tr>
+            <td>sValue:</td>
+            <td><input type="text" name="SValue"/></td>
+        </tr>
+    </table>
+    <br/>
+    <input type="submit" value="Submit"/>
+}
+
+<div>
+    <h3>Compare</h3>
+    @Html.Raw(ViewBag.compareOGvscustomSanitizer)
+
+    @* <h3>OG</h3> *@
+    @* @Html.Raw(ViewBag.sValue) *@
+
+    <h3>Custome Sanitizer</h3>
+    @Html.Raw(ViewBag.customerSanitizer)
+
+    <h3>HTML Sanitizer</h3>
+    @Html.Raw(ViewBag.htmlSanitizer)
+
+    <h3>AntiXSS</h3>
+    @Html.Raw(ViewBag.antiXSS)
+
+    <h3>HTML Encode</h3>
+    @Html.Raw(ViewBag.htmlEncode)
+
+    @* <h3>HTML Encode => Decode </h3> *@
+    @* @Html.Raw(ViewBag.decodedValue) *@
+
+</div>
