@@ -22,6 +22,8 @@ namespace XSSUnitTestMVC.Controllers
          [ValidateInput(false)]
          public ActionResult Submit(FormCollection form)
          {
+            //newline test github
+         
              _intput = form["SValue"];
              //var sValue = form["SValue"];
              
